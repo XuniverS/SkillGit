@@ -36,7 +36,7 @@ npm link
 npm test
 
 # 5. Make your changes, then test the CLI
-skillsync --help
+ski --help
 ```
 
 ### Branch Strategy
@@ -136,7 +136,7 @@ npm link
 npm test
 
 # 5. 修改代码后测试 CLI
-skillsync --help
+ski --help
 ```
 
 ### 分支策略

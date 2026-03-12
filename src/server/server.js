@@ -2,7 +2,7 @@
 
 /**
  * SkillSync 远端服务器
- * 运行方式: skillsync server [--port 3000] [--data-dir ./skillsync-data] [--token mytoken]
+ * 运行方式: ski server [--port 3000] [--data-dir ./skillsync-data] [--token mytoken]
  *
  * 提供以下 API：
  *   GET  /api/ping
@@ -184,7 +184,7 @@ class SkillSyncServer {
         return this._sendError(
           res,
           409,
-          'Remote has diverged. Run `skillsync pull` first to incorporate remote changes.'
+          'Remote has diverged. Run `ski pull` first to incorporate remote changes.'
         );
       }
     }

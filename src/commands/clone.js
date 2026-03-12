@@ -10,7 +10,7 @@ const logger = require('../utils/logger');
 
 async function cmdClone(remoteUrl, dirArg, options) {
   if (!remoteUrl) {
-    logger.error('Usage: skillsync clone <remote-url> [directory]');
+    logger.error('Usage: ski clone <remote-url> [directory]');
     process.exit(1);
   }
 
@@ -147,7 +147,7 @@ async function cmdClone(remoteUrl, dirArg, options) {
     }
 
     logger.success(`Repository cloned to: ${chalk.cyan(targetDir)}`);
-    logger.info(`cd ${dirName} && skillsync status`);
+    logger.info(`cd ${dirName} && ski status`);
   } catch (err) {
     spinner.fail(`Clone failed: ${err.message}`);
     // 清理失败的目录

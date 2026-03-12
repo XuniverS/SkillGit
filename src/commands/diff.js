@@ -38,7 +38,7 @@ async function cmdDiff(skillName, options) {
       continue;
     }
 
-    console.log(chalk.bold.blue(`\ndiff --skillsync a/${s} b/${s}`));
+    console.log(chalk.bold.blue(`\ndiff --ski a/${s} b/${s}`));
     logger.separator();
 
     for (const [file, { original, current }] of Object.entries(diffs)) {

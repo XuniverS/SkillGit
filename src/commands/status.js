@@ -31,7 +31,7 @@ async function cmdStatus(options) {
 
   if (status.staged.length > 0) {
     console.log(chalk.green.bold('\nChanges to be committed:'));
-    console.log(chalk.dim('  (use "skillsync restore --staged <skill>" to unstage)'));
+    console.log(chalk.dim('  (use "ski restore --staged <skill>" to unstage)'));
     for (const s of status.staged) {
       console.log(`  ${chalk.green('staged:   ')} ${s.name}`);
     }
@@ -39,7 +39,7 @@ async function cmdStatus(options) {
 
   if (status.unstaged.length > 0) {
     console.log(chalk.yellow.bold('\nChanges not staged for commit:'));
-    console.log(chalk.dim('  (use "skillsync add <skill>" to update what will be committed)'));
+    console.log(chalk.dim('  (use "ski add <skill>" to update what will be committed)'));
     for (const s of status.unstaged) {
       console.log(`  ${chalk.yellow('modified: ')} ${s.name}`);
     }
@@ -54,7 +54,7 @@ async function cmdStatus(options) {
 
   if (status.untracked.length > 0) {
     console.log(chalk.dim('\nUntracked skills:'));
-    console.log(chalk.dim('  (use "skillsync add <skill>" to include in what will be committed)'));
+    console.log(chalk.dim('  (use "ski add <skill>" to include in what will be committed)'));
     for (const s of status.untracked) {
       console.log(`  ${chalk.dim('untracked:')} ${s.name}`);
     }

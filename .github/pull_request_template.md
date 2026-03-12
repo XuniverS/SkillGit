@@ -36,7 +36,7 @@ Closes #<!-- issue number / Issue 编号 -->
 ```bash
 npm test
 # or manual steps:
-skillsync ...
+ski ...
 ```
 
 ---

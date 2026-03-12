@@ -10,9 +10,9 @@ const { mergeSkillConflicts, buildMergePrompt } = require('../lib/merger');
 const logger = require('../utils/logger');
 
 /**
- * skillsync merge --ai         使用 AI 合并所有冲突文件
- * skillsync merge --show-prompt 只显示 AI prompt 不实际调用
- * skillsync merge <skill>      合并指定 skill 的冲突
+ * ski merge --ai         使用 AI 合并所有冲突文件
+ * ski merge --show-prompt 只显示 AI prompt 不实际调用
+ * ski merge <skill>      合并指定 skill 的冲突
  */
 async function cmdMerge(skillArg, options) {
   const repo = Repository.requireRepo();
@@ -69,7 +69,7 @@ async function cmdMerge(skillArg, options) {
       initial: true,
     });
     if (!answer.proceed) {
-      logger.info('Merge cancelled. Fix conflicts manually, then `skillsync add` and `skillsync commit`.');
+      logger.info('Merge cancelled. Fix conflicts manually, then `ski add` and `ski commit`.');
       return;
     }
   }
@@ -80,7 +80,7 @@ async function cmdMerge(skillArg, options) {
 
   if (!apiKey) {
     logger.error(
-      'No API key configured.\n  Run: skillsync config set user.openapiKey <your-key>\n  Or set env: OPENCLAW_API_KEY=<your-key>'
+      'No API key configured.\n  Run: ski config set user.openapiKey <your-key>\n  Or set env: OPENCLAW_API_KEY=<your-key>'
     );
     process.exit(1);
   }
@@ -132,8 +132,8 @@ async function cmdMerge(skillArg, options) {
     logger.warn(`${manualNeeded} skill(s) need manual review (look for <!-- MERGE_CONFLICT --> markers).`);
   } else {
     logger.success('All conflicts resolved! Run:');
-    logger.plain('  skillsync add .');
-    logger.plain('  skillsync commit -m "resolve merge conflicts"');
+    logger.plain('  ski add .');
+    logger.plain('  ski commit -m "resolve merge conflicts"');
   }
 }
 

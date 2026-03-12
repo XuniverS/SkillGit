@@ -15,7 +15,7 @@ async function cmdPush(remoteName, branchArg, options) {
 
   if (!remoteUrl) {
     logger.error(
-      `Remote '${remote}' is not configured. Use: skillsync remote set-url ${remote} <url>`
+      `Remote '${remote}' is not configured. Use: ski remote set-url ${remote} <url>`
     );
     process.exit(1);
   }

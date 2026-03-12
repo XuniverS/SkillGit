@@ -42,7 +42,7 @@ process.on('unhandledRejection', (reason) => handleError(reason instanceof Error
 //  程序定义
 // ────────────────────────────────────────────────
 program
-  .name('skillsync')
+  .name('ski')
   .version(version, '-v, --version')
   .description(
     chalk.bold.blue('🐾 SkillSync') +
@@ -206,7 +206,7 @@ remoteCmd
     await cmdRemote('list').catch(handleError);
   });
 
-// shorthand: `skillsync remote -v`  and `skillsync remote`
+// shorthand: `ski remote -v`  and `ski remote`
 remoteCmd
   .action(async (options) => {
     const flag = options.v || options.list;

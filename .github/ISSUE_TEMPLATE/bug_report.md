@@ -19,7 +19,7 @@ assignees: ''
 ## Steps to reproduce / 复现步骤
 
 ```
-1. Run `skillsync ...`
+1. Run `ski ...`
 2. See error: ...
 ```
 
@@ -41,7 +41,7 @@ assignees: ''
 
 | Item | Value |
 |---|---|
-| SkillSync version | `skillsync -v` |
+| SkillSync version | `ski -v` |
 | Node.js version | `node -v` |
 | npm version | `npm -v` |
 | OS | e.g. macOS 14 / Ubuntu 22.04 / Windows 11 |

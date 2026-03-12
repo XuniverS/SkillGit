@@ -32,7 +32,7 @@ assignees: ''
 <!-- 如果适用，展示新功能的命令行使用方式。 -->
 
 ```bash
-skillsync <your-new-command> --some-flag
+ski <your-new-command> --some-flag
 ```
 
 ## Additional context / 补充说明

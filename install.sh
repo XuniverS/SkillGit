@@ -33,7 +33,7 @@ if [ -f "package.json" ] && grep -q '"name": "skillsync"' package.json; then
   echo "📦 Installing from local source..."
   npm install --production
   npm link
-  echo "✅ SkillSync installed! Run: skillsync --help"
+  echo "✅ SkillSync installed! Run: ski --help"
   exit 0
 fi
 
@@ -44,10 +44,10 @@ echo "✅ SkillSync installed successfully!"
 echo ""
 echo "Quick start:"
 echo "  mkdir my-skills && cd my-skills"
-echo "  skillsync init"
+echo "  ski init"
 echo "  # ... add your skill directories ..."
-echo "  skillsync add ."
-echo "  skillsync commit -m 'initial skills'"
+echo "  ski add ."
+echo "  ski commit -m 'initial skills'"
 echo ""
 echo "Start a server:"
-echo "  skillsync server --port 3000 --token mytoken"
+echo "  ski server --port 3000 --token mytoken"
