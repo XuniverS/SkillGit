@@ -19,7 +19,7 @@ assignees: ''
 ## Steps to reproduce / 复现步骤
 
 ```
-1. Run `ski ...`
+1. Run `skl ...`
 2. See error: ...
 ```
 
@@ -41,7 +41,7 @@ assignees: ''
 
 | Item | Value |
 |---|---|
-| SkillGit version | `ski -v` |
+| SkillGit version | `skl -v` |
 | Node.js version | `node -v` |
 | npm version | `npm -v` |
 | OS | e.g. macOS 14 / Ubuntu 22.04 / Windows 11 |

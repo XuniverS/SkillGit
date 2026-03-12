@@ -51,7 +51,7 @@ class Repository {
     const root = Repository.findRoot(cwd);
     if (!root) {
       throw new Error(
-        'Not a SkillGit repository (or any of the parent directories). Run `ski init` to initialize.'
+        'Not a SkillGit repository (or any of the parent directories). Run `skl init` to initialize.'
       );
     }
     return new Repository(root);
@@ -103,7 +103,7 @@ class Repository {
 
   async getConfig() {
     if (!fs.existsSync(this.configPath)) {
-      throw new Error('Repository config not found. Run `ski init` first.');
+      throw new Error('Repository config not found. Run `skl init` first.');
     }
     return fs.readJson(this.configPath);
   }
@@ -198,7 +198,7 @@ class Repository {
   async commit(message, options = {}) {
     const index = await this.getIndex();
     if (Object.keys(index.staged).length === 0) {
-      throw new Error('Nothing to commit. Use `ski add <skill>` to stage changes.');
+      throw new Error('Nothing to commit. Use `skl add <skill>` to stage changes.');
     }
 
     const config = await this.getConfig();
@@ -367,7 +367,7 @@ class Repository {
     const currentFiles = await this._readSkillFiles(absPath);
     const tracked = index.tracked[skillName] || index.staged[skillName];
     if (!tracked) {
-      throw new Error(`Skill '${skillName}' is not tracked. Run \`ski add ${skillName}\` first.`);
+      throw new Error(`Skill '${skillName}' is not tracked. Run \`skl add ${skillName}\` first.`);
     }
 
     const diffs = {};

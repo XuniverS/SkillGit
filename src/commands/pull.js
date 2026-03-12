@@ -18,7 +18,7 @@ async function cmdPull(remoteName, branchArg, options) {
 
   if (!remoteUrl) {
     logger.error(
-      `Remote '${remote}' is not configured. Use: ski remote set-url ${remote} <url>`
+      `Remote '${remote}' is not configured. Use: skl remote set-url ${remote} <url>`
     );
     process.exit(1);
   }
@@ -231,7 +231,7 @@ async function cmdPull(remoteName, branchArg, options) {
     if (conflictSkills.length > 0) {
       logger.warn(`Needs manual review: ${conflictSkills.join(', ')}`);
       logger.info(
-        'Fix conflicts marked with <!-- MERGE_CONFLICT --> then run:\n  ski add <skill>\n  ski commit -m "resolve conflicts"'
+        'Fix conflicts marked with <!-- MERGE_CONFLICT --> then run:\n  skl add <skill>\n  skl commit -m "resolve conflicts"'
       );
     }
   } catch (err) {

@@ -64,7 +64,7 @@ async function cmdInit(options) {
   await repo.init({ name, email, remote, openapiKey, model });
 
   logger.success(`Initialized empty SkillGit repository in ${cwd}/.skillgit/`);
-  logger.info(`Remote: ${remote || chalk.dim('(not set, use: ski remote set-url origin <url>)')}`);
+  logger.info(`Remote: ${remote || chalk.dim('(not set, use: skl remote set-url origin <url>)')}`);
   logger.info(`AI model: ${model}`);
 }
 

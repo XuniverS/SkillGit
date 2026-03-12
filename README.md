@@ -21,11 +21,11 @@
 
 ### What is SkillGit?
 
-SkillGit is a **Git-inspired CLI tool** for managing, versioning, and collaborating on [OpenClaw](https://openclaw.ai) Skill files. The command is `ski`.
+SkillGit is a **Git-inspired CLI tool** for managing, versioning, and collaborating on [OpenClaw](https://openclaw.ai) Skill files. The command is `skl`.
 
 Key features:
-- 📦 **Full version control** — `ski init`, `ski add`, `ski commit`, `ski log`, `ski diff`
-- 🌐 **Team collaboration** — `ski push`, `ski pull`, `ski fetch`, `ski clone` against a built-in HTTP server
+- 📦 **Full version control** — `skl init`, `skl add`, `skl commit`, `skl log`, `skl diff`
+- 🌐 **Team collaboration** — `skl push`, `skl pull`, `skl fetch`, `skl clone` against a built-in HTTP server
 - 🤖 **AI conflict resolution** — automatically merges diverged Skill files using OpenClaw models
 - ⚙️ **Configurable** — custom API base, model, authentication token
 
@@ -48,7 +48,7 @@ npm install -g skillgit
 git clone https://github.com/XuniverS/skillgit.git
 cd skillgit
 npm install
-npm link        # registers the `ski` binary globally
+npm link        # registers the `skl` binary globally
 ```
 
 **Option C — one-line install script:**
@@ -62,54 +62,54 @@ bash <(curl -fsSL https://raw.githubusercontent.com/XuniverS/skillgit/main/insta
 ```bash
 # 1. Initialize a skill workspace
 mkdir my-skills && cd my-skills
-ski init
+skl init
 
 # 2. Stage and commit
-ski add .
-ski commit -m "initial skills"
+skl add .
+skl commit -m "initial skills"
 
 # 3. Start a collaboration server (for your team)
-ski server --port 3000 --token mytoken
+skl server --port 3000 --token mytoken
 
 # 4. Connect and push
-ski remote set-url origin http://your-server:3000
-ski push
+skl remote set-url origin http://your-server:3000
+skl push
 
 # 5. Sync and auto-resolve conflicts with AI
-ski pull   # AI merges conflicts automatically
+skl pull   # AI merges conflicts automatically
 ```
 
 ### Commands Reference
 
 | Command | Description |
 |---|---|
-| `ski init` | Initialize a new repository |
-| `ski clone <url> [dir]` | Clone a remote repository |
-| `ski add [skill\|.]` | Stage changes |
-| `ski commit -m "msg"` | Commit staged changes |
-| `ski status` | Show working tree status |
-| `ski diff [skill]` | Show file differences |
-| `ski log` | Display commit history |
-| `ski push [remote] [branch]` | Push commits to remote |
-| `ski pull [remote] [branch]` | Pull and AI-merge remote changes |
-| `ski fetch [remote] [branch]` | Download without merging |
-| `ski merge [skill] [--ai]` | Resolve conflicts (optionally with AI) |
-| `ski merge --show-prompt` | Preview the AI merge prompt |
-| `ski config set <key> <value>` | Set a config value |
-| `ski config list` | List all config values |
-| `ski remote set-url <name> <url>` | Set remote URL |
-| `ski server` | Start the collaboration server |
-| `ski whoami` | Show current user |
+| `skl init` | Initialize a new repository |
+| `skl clone <url> [dir]` | Clone a remote repository |
+| `skl add [skill\|.]` | Stage changes |
+| `skl commit -m "msg"` | Commit staged changes |
+| `skl status` | Show working tree status |
+| `skl diff [skill]` | Show file differences |
+| `skl log` | Display commit history |
+| `skl push [remote] [branch]` | Push commits to remote |
+| `skl pull [remote] [branch]` | Pull and AI-merge remote changes |
+| `skl fetch [remote] [branch]` | Download without merging |
+| `skl merge [skill] [--ai]` | Resolve conflicts (optionally with AI) |
+| `skl merge --show-prompt` | Preview the AI merge prompt |
+| `skl config set <key> <value>` | Set a config value |
+| `skl config list` | List all config values |
+| `skl remote set-url <name> <url>` | Set remote URL |
+| `skl server` | Start the collaboration server |
+| `skl whoami` | Show current user |
 
 ### Configuration
 
 ```bash
-ski config set user.name      "Alice"
-ski config set user.email     "alice@example.com"
-ski config set user.openapiKey "sk-..."      # OpenClaw API key
-ski config set user.model     "gpt-4o"       # model for AI conflict resolution
-ski config set user.apiBase   "https://..."  # custom API endpoint (optional)
-ski config list
+skl config set user.name      "Alice"
+skl config set user.email     "alice@example.com"
+skl config set user.openapiKey "sk-..."      # OpenClaw API key
+skl config set user.model     "gpt-4o"       # model for AI conflict resolution
+skl config set user.apiBase   "https://..."  # custom API endpoint (optional)
+skl config list
 ```
 
 > **Tip:** Get your OpenClaw API key at [openclaw.ai](https://openclaw.ai).
@@ -128,7 +128,7 @@ When two collaborators edit the same Skill file, SkillGit calls the configured O
 ```
 skillgit/
 ├── bin/
-│   └── skillsync.js        # CLI entry point (command: ski)
+│   └── skillsync.js        # CLI entry point (command: skl)
 ├── src/
 │   ├── commands/           # One file per sub-command
 │   ├── lib/                # Core logic (repository, merger, remote, …)
@@ -153,11 +153,11 @@ Contributions are welcome! Please read [CONTRIBUTING.md](./CONTRIBUTING.md) firs
 
 ### SkillGit 是什么？
 
-SkillGit 是一个**类 Git 的命令行工具**，专为管理、版本化和团队协作 [OpenClaw](https://openclaw.ai) Skill 文件而设计。命令为 `ski`。
+SkillGit 是一个**类 Git 的命令行工具**，专为管理、版本化和团队协作 [OpenClaw](https://openclaw.ai) Skill 文件而设计。命令为 `skl`。
 
 核心功能：
-- 📦 **完整版本控制** — `ski init`、`ski add`、`ski commit`、`ski log`、`ski diff`
-- 🌐 **团队协作** — 通过内置 HTTP 服务器进行 `ski push`、`ski pull`、`ski fetch`、`ski clone`
+- 📦 **完整版本控制** — `skl init`、`skl add`、`skl commit`、`skl log`、`skl diff`
+- 🌐 **团队协作** — 通过内置 HTTP 服务器进行 `skl push`、`skl pull`、`skl fetch`、`skl clone`
 - 🤖 **AI 冲突解决** — 自动使用 OpenClaw 模型合并分叉的 Skill 文件
 - ⚙️ **高度可配置** — 自定义 API 接口、模型、鉴权 Token
 
@@ -180,7 +180,7 @@ npm install -g skillgit
 git clone https://github.com/XuniverS/skillgit.git
 cd skillgit
 npm install
-npm link        # 全局注册 ski 命令
+npm link        # 全局注册 skl 命令
 ```
 
 **方式三 — 一键安装脚本：**
@@ -194,54 +194,54 @@ bash <(curl -fsSL https://raw.githubusercontent.com/XuniverS/skillgit/main/insta
 ```bash
 # 1. 初始化技能工作区
 mkdir my-skills && cd my-skills
-ski init
+skl init
 
 # 2. 暂存并提交
-ski add .
-ski commit -m "初始技能"
+skl add .
+skl commit -m "初始技能"
 
 # 3. 启动协作服务器（供团队使用）
-ski server --port 3000 --token mytoken
+skl server --port 3000 --token mytoken
 
 # 4. 设置远程并推送
-ski remote set-url origin http://your-server:3000
-ski push
+skl remote set-url origin http://your-server:3000
+skl push
 
 # 5. 拉取并自动 AI 解决冲突
-ski pull
+skl pull
 ```
 
 ### 命令速查
 
 | 命令 | 说明 |
 |---|---|
-| `ski init` | 初始化仓库 |
-| `ski clone <url> [dir]` | 克隆远程仓库 |
-| `ski add [skill\|.]` | 暂存变更 |
-| `ski commit -m "msg"` | 提交暂存内容 |
-| `ski status` | 查看工作树状态 |
-| `ski diff [skill]` | 查看文件差异 |
-| `ski log` | 提交历史 |
-| `ski push [远程] [分支]` | 推送到远程 |
-| `ski pull [远程] [分支]` | 拉取并 AI 合并 |
-| `ski fetch [远程] [分支]` | 仅下载，不合并 |
-| `ski merge [skill] [--ai]` | 解决冲突（可选 AI）|
-| `ski merge --show-prompt` | 预览 AI 合并提示词 |
-| `ski config set <键> <值>` | 设置配置项 |
-| `ski config list` | 列出所有配置 |
-| `ski remote set-url <名称> <url>` | 设置远程地址 |
-| `ski server` | 启动协作服务器 |
-| `ski whoami` | 显示当前用户 |
+| `skl init` | 初始化仓库 |
+| `skl clone <url> [dir]` | 克隆远程仓库 |
+| `skl add [skill\|.]` | 暂存变更 |
+| `skl commit -m "msg"` | 提交暂存内容 |
+| `skl status` | 查看工作树状态 |
+| `skl diff [skill]` | 查看文件差异 |
+| `skl log` | 提交历史 |
+| `skl push [远程] [分支]` | 推送到远程 |
+| `skl pull [远程] [分支]` | 拉取并 AI 合并 |
+| `skl fetch [远程] [分支]` | 仅下载，不合并 |
+| `skl merge [skill] [--ai]` | 解决冲突（可选 AI）|
+| `skl merge --show-prompt` | 预览 AI 合并提示词 |
+| `skl config set <键> <值>` | 设置配置项 |
+| `skl config list` | 列出所有配置 |
+| `skl remote set-url <名称> <url>` | 设置远程地址 |
+| `skl server` | 启动协作服务器 |
+| `skl whoami` | 显示当前用户 |
 
 ### 配置
 
 ```bash
-ski config set user.name      "张三"
-ski config set user.email     "zhangsan@example.com"
-ski config set user.openapiKey "sk-..."      # OpenClaw API Key
-ski config set user.model     "gpt-4o"       # AI 冲突解决所用模型
-ski config set user.apiBase   "https://..."  # 自定义 API 端点（可选）
-ski config list
+skl config set user.name      "张三"
+skl config set user.email     "zhangsan@example.com"
+skl config set user.openapiKey "sk-..."      # OpenClaw API Key
+skl config set user.model     "gpt-4o"       # AI 冲突解决所用模型
+skl config set user.apiBase   "https://..."  # 自定义 API 端点（可选）
+skl config list
 ```
 
 > **提示：** 在 [openclaw.ai](https://openclaw.ai) 获取你的 API Key。

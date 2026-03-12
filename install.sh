@@ -33,7 +33,7 @@ if [ -f "package.json" ] && grep -q '"name": "skillgit"' package.json; then
   echo "📦 Installing from local source..."
   npm install --production
   npm link
-  echo "✅ SkillGit installed! Run: ski --help"
+  echo "✅ SkillGit installed! Run: skl --help"
   exit 0
 fi
 
@@ -44,10 +44,10 @@ echo "✅ SkillGit installed successfully!"
 echo ""
 echo "Quick start:"
 echo "  mkdir my-skills && cd my-skills"
-echo "  ski init"
+echo "  skl init"
 echo "  # ... add your skill directories ..."
-echo "  ski add ."
-echo "  ski commit -m 'initial skills'"
+echo "  skl add ."
+echo "  skl commit -m 'initial skills'"
 echo ""
 echo "Start a server:"
-echo "  ski server --port 3000 --token mytoken"
+echo "  skl server --port 3000 --token mytoken"

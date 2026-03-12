@@ -34,7 +34,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `remote set-url/get-url/list` — manage named remotes
 - `server` — built-in HTTP server for team collaboration (`--port`, `--token`, `--data-dir`)
 - `whoami` — display current user and API key status
-- `ski` — the primary CLI command (installed as `skillgit` on npm)
+- `skl` — the primary CLI command (installed as `skillgit` on npm)
 - `DEBUG=1` environment variable for verbose stack traces
 - MIT License
 

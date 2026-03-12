@@ -2,7 +2,7 @@
 
 /**
  * SkillGit 远端服务器
- * 运行方式: ski server [--port 3000] [--data-dir ./skillgit-data] [--token mytoken]
+ * 运行方式: skl server [--port 3000] [--data-dir ./skillgit-data] [--token mytoken]
  *
  * 提供以下 API：
  *   GET  /api/ping
@@ -184,7 +184,7 @@ class SkillGitServer {
         return this._sendError(
           res,
           409,
-          'Remote has diverged. Run `ski pull` first to incorporate remote changes.'
+          'Remote has diverged. Run `skl pull` first to incorporate remote changes.'
         );
       }
     }

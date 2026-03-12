@@ -32,14 +32,14 @@ async function cmdConfig(action, key, value, options) {
     return;
   }
 
-  // 解析 `ski config user.name "Alice"` 格式
+  // 解析 `skl config user.name "Alice"` 格式
   if (action && key && !value) {
     await repo.setConfig(action, key);
     logger.success(`Set ${action} = ${key}`);
     return;
   }
 
-  logger.error('Usage: ski config [list|get <key>|set <key> <value>]');
+  logger.error('Usage: skl config [list|get <key>|set <key> <value>]');
 }
 
 function printObj(obj, prefix) {
@@ -90,7 +90,7 @@ async function cmdRemote(action, name, url) {
     return;
   }
 
-  logger.error('Usage: ski remote [set-url <name> <url> | get-url <name> | list]');
+  logger.error('Usage: skl remote [set-url <name> <url> | get-url <name> | list]');
 }
 
 module.exports = { cmdConfig, cmdRemote };

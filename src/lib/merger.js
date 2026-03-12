@@ -114,7 +114,7 @@ async function callAIMerge(prompt, options = {}) {
 
   if (!apiKey) {
     throw new Error(
-      'OpenClaw API Key 未配置。请运行：ski config set user.openapiKey <your-key>'
+      'OpenClaw API Key 未配置。请运行：skl config set user.openapiKey <your-key>'
     );
   }
 

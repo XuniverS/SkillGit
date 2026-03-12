@@ -26,7 +26,7 @@ async function cmdCommit(options) {
 
   const index = await repo.getIndex();
   if (Object.keys(index.staged).length === 0) {
-    logger.warn('Nothing to commit. Use `ski add <skill>` to stage changes first.');
+    logger.warn('Nothing to commit. Use `skl add <skill>` to stage changes first.');
     return;
   }
 

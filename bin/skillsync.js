@@ -42,7 +42,7 @@ process.on('unhandledRejection', (reason) => handleError(reason instanceof Error
 //  程序定义
 // ────────────────────────────────────────────────
 program
-  .name('ski')
+  .name('skl')
   .version(version, '-v, --version')
   .description(
     chalk.bold.blue('🐾 SkillGit') +
@@ -206,7 +206,7 @@ remoteCmd
     await cmdRemote('list').catch(handleError);
   });
 
-// shorthand: `ski remote -v`  and `ski remote`
+// shorthand: `skl remote -v`  and `skl remote`
 remoteCmd
   .action(async (options) => {
     const flag = options.v || options.list;

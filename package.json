@@ -1,10 +1,10 @@
 {
   "name": "skillgit",
   "version": "1.0.0",
-  "description": "A Git-like version control tool for OpenClaw Skills with AI-powered conflict resolution. Command: ski",
+  "description": "A Git-like version control tool for OpenClaw Skills with AI-powered conflict resolution. Command: skl",
   "bin": {
-    "skillsync": "./bin/skillsync.js",
-    "ski": "./bin/skillsync.js"
+    "skillgit": "./bin/skillsync.js",
+    "skl": "./bin/skillsync.js"
   },
   "scripts": {
     "start": "node bin/skillsync.js",
