@@ -45,14 +45,14 @@ program
   .name('ski')
   .version(version, '-v, --version')
   .description(
-    chalk.bold.blue('🐾 SkillSync') +
+    chalk.bold.blue('🐾 SkillGit') +
     ' — Git-like version control for OpenClaw Skills with AI-powered conflict resolution'
   );
 
 // ── init ──────────────────────────────────────
 program
   .command('init')
-  .description('Initialize a new SkillSync repository in the current directory')
+  .description('Initialize a new SkillGit repository in the current directory')
   .option('-n, --name <name>', 'Your name')
   .option('-e, --email <email>', 'Your email')
   .option('-r, --remote <url>', 'Remote server URL')
@@ -66,7 +66,7 @@ program
 // ── clone ─────────────────────────────────────
 program
   .command('clone <remote-url> [directory]')
-  .description('Clone a remote SkillSync repository')
+  .description('Clone a remote SkillGit repository')
   .option('-b, --branch <branch>', 'Branch to clone (default: main)')
   .option('-t, --token <token>', 'Authentication token')
   .option('-k, --openapi-key <key>', 'OpenClaw API key')
@@ -216,9 +216,9 @@ remoteCmd
 // ── server ────────────────────────────────────
 program
   .command('server')
-  .description('Start the SkillSync remote server')
+  .description('Start the SkillGit remote server')
   .option('-p, --port <port>', 'Port to listen on (default: 3000)')
-  .option('-d, --data-dir <dir>', 'Directory to store repository data (default: ./skillsync-data)')
+  .option('-d, --data-dir <dir>', 'Directory to store repository data (default: ./skillgit-data)')
   .option('-t, --token <token>', 'Authentication token (leave empty for open access)')
   .option('--verbose', 'Verbose request logging')
   .action(async (options) => {

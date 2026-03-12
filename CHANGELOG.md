@@ -20,13 +20,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.0] — 2026-03-12
 
 ### Added
-- `init` — initialize a SkillSync repository with interactive prompts (`-y` to skip)
+- `init` — initialize a SkillGit repository with interactive prompts (`-y` to skip)
 - `add` — stage skill files or entire workspace (`.` glob support via `fast-glob`)
 - `commit` — record staged changes with a message; auto-generates SHA-based object hashes
 - `status` — display untracked, modified, and staged files
 - `diff` — show line-level diff between working copy and last commit (powered by `diff`)
 - `log` — formatted commit history with author, date, and message
-- `push` / `pull` / `fetch` — sync commits with a remote SkillSync server over HTTP
+- `push` / `pull` / `fetch` — sync commits with a remote SkillGit server over HTTP
 - `clone` — clone a remote repository locally
 - `merge` — three-way skill conflict resolution; `--ai` flag calls OpenClaw API
 - `merge --show-prompt` — preview the AI merge prompt without calling the API
@@ -34,9 +34,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `remote set-url/get-url/list` — manage named remotes
 - `server` — built-in HTTP server for team collaboration (`--port`, `--token`, `--data-dir`)
 - `whoami` — display current user and API key status
-- `ski` — the primary CLI command (`skillsync` also works as an alias)
+- `ski` — the primary CLI command (installed as `skillgit` on npm)
 - `DEBUG=1` environment variable for verbose stack traces
 - MIT License
 
-[Unreleased]: https://github.com/XuniverS/skillSync/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/XuniverS/skillSync/releases/tag/v1.0.0
+[Unreleased]: https://github.com/XuniverS/skillgit/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/XuniverS/skillgit/releases/tag/v1.0.0

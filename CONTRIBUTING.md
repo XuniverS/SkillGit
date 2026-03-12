@@ -1,4 +1,4 @@
-# Contributing to SkillSync / 贡献指南
+# Contributing to SkillGit / 贡献指南
 
 [English](#english) · [中文](#中文)
 
@@ -6,7 +6,7 @@
 
 ## English
 
-Thank you for your interest in contributing to SkillSync! 🎉
+Thank you for your interest in contributing to SkillGit! 🎉
 
 ### Code of Conduct
 
@@ -23,8 +23,8 @@ By participating in this project, you agree to be respectful and constructive. W
 
 ```bash
 # 1. Fork this repo on GitHub, then clone your fork
-git clone https://github.com/XuniverS/skillSync.git
-cd skillSync
+git clone https://github.com/XuniverS/skillgit.git
+cd skillgit
 
 # 2. Install dependencies
 npm install
@@ -99,7 +99,7 @@ npm test
 ### Reporting Security Vulnerabilities
 
 Please **do not** open a public GitHub issue for security vulnerabilities.  
-Email the maintainers directly via a [GitHub Security Advisory](https://github.com/XuniverS/skillSync/security/advisories/new) or reach out through [GitHub Issues](https://github.com/XuniverS/skillSync/issues) with the `security` label. Include:
+Email the maintainers directly via a [GitHub Security Advisory](https://github.com/XuniverS/skillgit/security/advisories/new) or reach out through [GitHub Issues](https://github.com/XuniverS/skillgit/issues) with the `security` label. Include:
 - A description of the vulnerability
 - Steps to reproduce
 - Potential impact
@@ -110,7 +110,7 @@ We aim to respond within 48 hours.
 
 ## 中文
 
-感谢你对 SkillSync 的关注！🎉
+感谢你对 SkillGit 的关注！🎉
 
 ### 贡献方式
 
@@ -123,8 +123,8 @@ We aim to respond within 48 hours.
 
 ```bash
 # 1. 在 GitHub fork 本仓库，然后克隆你的 fork
-git clone https://github.com/XuniverS/skillSync.git
-cd skillSync
+git clone https://github.com/XuniverS/skillgit.git
+cd skillgit
 
 # 2. 安装依赖
 npm install
@@ -193,7 +193,7 @@ docs(readme): 更新快速上手说明
 ### 安全漏洞报告
 
 请**不要**通过公开 GitHub Issue 报告安全漏洞。  
-请通过 [GitHub Security Advisory](https://github.com/XuniverS/skillSync/security/advisories/new) 或带 `security` 标签的 [GitHub Issue](https://github.com/XuniverS/skillSync/issues) 联系我们，说明：
+请通过 [GitHub Security Advisory](https://github.com/XuniverS/skillgit/security/advisories/new) 或带 `security` 标签的 [GitHub Issue](https://github.com/XuniverS/skillgit/issues) 联系我们，说明：
 - 漏洞描述
 - 复现步骤
 - 潜在影响

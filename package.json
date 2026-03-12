@@ -1,8 +1,7 @@
 {
-  "name": "skillsync",
+  "name": "skillgit",
   "version": "1.0.0",
-  "description": "A Git-like version control tool for OpenClaw Skills with AI-powered conflict resolution",
-  "main": "src/index.js",
+  "description": "A Git-like version control tool for OpenClaw Skills with AI-powered conflict resolution. Command: ski",
   "bin": {
     "skillsync": "./bin/skillsync.js",
     "ski": "./bin/skillsync.js"
@@ -33,16 +32,18 @@
     "skills",
     "openclaw",
     "version-control",
-    "ai"
+    "ai",
+    "git",
+    "cli"
   ],
-  "author": "SkillSync Contributors",
+  "author": "XuniverS",
   "license": "MIT",
-  "homepage": "https://github.com/XuniverS/skillSync#readme",
+  "homepage": "https://github.com/XuniverS/skillgit#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/XuniverS/skillSync.git"
+    "url": "https://github.com/XuniverS/skillgit.git"
   },
   "bugs": {
-    "url": "https://github.com/XuniverS/skillSync/issues"
+    "url": "https://github.com/XuniverS/skillgit/issues"
   }
 }

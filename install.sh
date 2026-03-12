@@ -1,14 +1,14 @@
 #!/bin/bash
-# SkillSync Install Script
+# SkillGit Install Script
 # Usage: bash install.sh
 
 set -e
 
-INSTALL_DIR="$HOME/.skillsync"
+INSTALL_DIR="$HOME/.skillgit"
 BIN_DIR="$HOME/.local/bin"
-REPO_URL="https://github.com/XuniverS/skillSync"
+REPO_URL="https://github.com/XuniverS/skillgit"
 
-echo "🐾 Installing SkillSync..."
+echo "🐾 Installing SkillGit..."
 
 # 检查 node
 if ! command -v node &> /dev/null; then
@@ -29,18 +29,18 @@ if ! command -v npm &> /dev/null; then
 fi
 
 # 如果是从源码目录安装
-if [ -f "package.json" ] && grep -q '"name": "skillsync"' package.json; then
+if [ -f "package.json" ] && grep -q '"name": "skillgit"' package.json; then
   echo "📦 Installing from local source..."
   npm install --production
   npm link
-  echo "✅ SkillSync installed! Run: ski --help"
+  echo "✅ SkillGit installed! Run: ski --help"
   exit 0
 fi
 
 # 从 npm 安装（发布后）
-# npm install -g skillsync
+# npm install -g skillgit
 
-echo "✅ SkillSync installed successfully!"
+echo "✅ SkillGit installed successfully!"
 echo ""
 echo "Quick start:"
 echo "  mkdir my-skills && cd my-skills"

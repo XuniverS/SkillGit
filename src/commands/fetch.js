@@ -8,7 +8,7 @@ const { RemoteClient, setLocalRemoteRef } = require('../lib/remote');
 const logger = require('../utils/logger');
 
 /**
- * skillsync fetch [remote] [branch]
+ * ski fetch [remote] [branch]
  * 只下载远端数据，不修改工作目录（类似 git fetch）
  */
 async function cmdFetch(remoteName, branchArg, options) {

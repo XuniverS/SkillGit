@@ -1,15 +1,15 @@
 'use strict';
 
-const SkillSyncServer = require('../server/server');
+const SkillGitServer = require('../server/server');
 const logger = require('../utils/logger');
 
 async function cmdServer(options) {
-  const port = parseInt(options.port || process.env.SKILLSYNC_PORT || '3000', 10);
-  const dataDir = options.dataDir || process.env.SKILLSYNC_DATA_DIR || './skillsync-data';
-  const token = options.token || process.env.SKILLSYNC_TOKEN || '';
+  const port = parseInt(options.port || process.env.SKILLGIT_PORT || '3000', 10);
+  const dataDir = options.dataDir || process.env.SKILLGIT_DATA_DIR || './skillgit-data';
+  const token = options.token || process.env.SKILLGIT_TOKEN || '';
   const verbose = options.verbose || false;
 
-  const server = new SkillSyncServer({ port, dataDir, token, verbose });
+  const server = new SkillGitServer({ port, dataDir, token, verbose });
 
   process.on('SIGINT', () => {
     logger.info('\nShutting down server...');

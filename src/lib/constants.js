@@ -1,6 +1,6 @@
 'use strict';
 
-const SKILLSYNC_DIR = '.skillsync';
+const SKILLSYNC_DIR = '.skillgit';
 const CONFIG_FILE = 'config.json';
 const INDEX_FILE = 'index.json';
 const OBJECTS_DIR = 'objects';
@@ -30,7 +30,7 @@ const EXIT_CODES = {
 };
 
 module.exports = {
-  SKILLSYNC_DIR,
+  SKILLSYNC_DIR, // used as '.skillgit' directory name
   CONFIG_FILE,
   INDEX_FILE,
   OBJECTS_DIR,

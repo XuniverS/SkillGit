@@ -18,18 +18,18 @@ const { hashContent, generateCommitId } = require('../utils/hash');
 class Repository {
   constructor(cwd) {
     this.cwd = cwd || process.cwd();
-    this.skillsyncDir = path.join(this.cwd, SKILLSYNC_DIR);
-    this.configPath = path.join(this.skillsyncDir, CONFIG_FILE);
-    this.indexPath = path.join(this.skillsyncDir, INDEX_FILE);
-    this.objectsDir = path.join(this.skillsyncDir, OBJECTS_DIR);
-    this.refsDir = path.join(this.skillsyncDir, REFS_DIR);
-    this.logsDir = path.join(this.skillsyncDir, LOGS_DIR);
-    this.headPath = path.join(this.skillsyncDir, HEAD_FILE);
-    this.mergeHeadPath = path.join(this.skillsyncDir, MERGE_HEAD_FILE);
+    this.skillgitDir = path.join(this.cwd, SKILLSYNC_DIR); // .skillgit/
+    this.configPath = path.join(this.skillgitDir, CONFIG_FILE);
+    this.indexPath = path.join(this.skillgitDir, INDEX_FILE);
+    this.objectsDir = path.join(this.skillgitDir, OBJECTS_DIR);
+    this.refsDir = path.join(this.skillgitDir, REFS_DIR);
+    this.logsDir = path.join(this.skillgitDir, LOGS_DIR);
+    this.headPath = path.join(this.skillgitDir, HEAD_FILE);
+    this.mergeHeadPath = path.join(this.skillgitDir, MERGE_HEAD_FILE);
   }
 
   /**
-   * 检查当前目录是否是一个 SkillSync 仓库（向上查找）
+   * 检查当前目录是否是一个 SkillGit 仓库（向上查找）
    */
   static findRoot(startDir) {
     let dir = startDir || process.cwd();
@@ -51,7 +51,7 @@ class Repository {
     const root = Repository.findRoot(cwd);
     if (!root) {
       throw new Error(
-        'Not a SkillSync repository (or any of the parent directories). Run `ski init` to initialize.'
+        'Not a SkillGit repository (or any of the parent directories). Run `ski init` to initialize.'
       );
     }
     return new Repository(root);
@@ -62,10 +62,10 @@ class Repository {
   // ────────────────────────────────────────────
 
   async init(options = {}) {
-    if (fs.existsSync(this.skillsyncDir)) {
+    if (fs.existsSync(this.skillgitDir)) {
       throw new Error(`Repository already initialized at ${this.cwd}`);
     }
-    await fs.mkdirs(this.skillsyncDir);
+    await fs.mkdirs(this.skillgitDir);
     await fs.mkdirs(this.objectsDir);
     await fs.mkdirs(this.refsDir);
     await fs.mkdirs(this.logsDir);

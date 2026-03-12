@@ -1,6 +1,6 @@
 ---
 name: 🐛 Bug Report
-about: Report a bug to help us improve SkillSync / 报告 Bug 帮助我们改进
+about: Report a bug to help us improve SkillGit / 报告 Bug 帮助我们改进
 title: "[Bug] "
 labels: bug
 assignees: ''
@@ -41,7 +41,7 @@ assignees: ''
 
 | Item | Value |
 |---|---|
-| SkillSync version | `ski -v` |
+| SkillGit version | `ski -v` |
 | Node.js version | `node -v` |
 | npm version | `npm -v` |
 | OS | e.g. macOS 14 / Ubuntu 22.04 / Windows 11 |

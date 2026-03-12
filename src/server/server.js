@@ -1,8 +1,8 @@
 'use strict';
 
 /**
- * SkillSync 远端服务器
- * 运行方式: ski server [--port 3000] [--data-dir ./skillsync-data] [--token mytoken]
+ * SkillGit 远端服务器
+ * 运行方式: ski server [--port 3000] [--data-dir ./skillgit-data] [--token mytoken]
  *
  * 提供以下 API：
  *   GET  /api/ping
@@ -20,10 +20,10 @@ const url = require('url');
 const path = require('path');
 const fs = require('fs-extra');
 
-class SkillSyncServer {
+class SkillGitServer {
   constructor(options = {}) {
     this.port = options.port || 3000;
-    this.dataDir = options.dataDir || path.join(process.cwd(), 'skillsync-data');
+    this.dataDir = options.dataDir || path.join(process.cwd(), 'skillgit-data');
     this.token = options.token || '';
     this.verbose = options.verbose || false;
 
@@ -44,7 +44,7 @@ class SkillSyncServer {
 
     const server = http.createServer(this._handleRequest.bind(this));
     server.listen(this.port, () => {
-      console.log(`\n🐾 SkillSync server running at http://0.0.0.0:${this.port}`);
+      console.log(`\n🐾 SkillGit server running at http://0.0.0.0:${this.port}`);
       console.log(`   Data directory: ${this.dataDir}`);
       if (this.token) {
         console.log(`   Auth token: ${this.token.substring(0, 4)}${'*'.repeat(this.token.length - 4)}`);
@@ -316,4 +316,4 @@ class SkillSyncServer {
   }
 }
 
-module.exports = SkillSyncServer;
+module.exports = SkillGitServer;
