@@ -45,8 +45,8 @@ npm install -g skillgit
 **Option B — from source:**
 
 ```bash
-git clone https://github.com/XuniverS/skillgit.git
-cd skillgit
+git clone https://github.com/XuniverS/SkillGit.git
+cd SkillGit
 npm install
 npm link        # registers the `skl` binary globally
 ```
@@ -54,7 +54,7 @@ npm link        # registers the `skl` binary globally
 **Option C — one-line install script:**
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/XuniverS/skillgit/main/install.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/XuniverS/SkillGit/main/install.sh)
 ```
 
 ### Quick Start
@@ -126,9 +126,9 @@ When two collaborators edit the same Skill file, SkillGit calls the configured O
 ### Project Structure
 
 ```
-skillgit/
+SkillGit/
 ├── bin/
-│   └── skillsync.js        # CLI entry point (command: skl)
+│   └── skl.js              # CLI entry point (command: skl)
 ├── src/
 │   ├── commands/           # One file per sub-command
 │   ├── lib/                # Core logic (repository, merger, remote, …)
@@ -177,8 +177,8 @@ npm install -g skillgit
 **方式二 — 从源码安装：**
 
 ```bash
-git clone https://github.com/XuniverS/skillgit.git
-cd skillgit
+git clone https://github.com/XuniverS/SkillGit.git
+cd SkillGit
 npm install
 npm link        # 全局注册 skl 命令
 ```
@@ -186,7 +186,7 @@ npm link        # 全局注册 skl 命令
 **方式三 — 一键安装脚本：**
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/XuniverS/skillgit/main/install.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/XuniverS/SkillGit/main/install.sh)
 ```
 
 ### 快速上手

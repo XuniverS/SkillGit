@@ -6,7 +6,7 @@ set -e
 
 INSTALL_DIR="$HOME/.skillgit"
 BIN_DIR="$HOME/.local/bin"
-REPO_URL="https://github.com/XuniverS/skillgit"
+REPO_URL="https://github.com/XuniverS/SkillGit"
 
 echo "🐾 Installing SkillGit..."
 

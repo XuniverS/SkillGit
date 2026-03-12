@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "A Git-like version control tool for OpenClaw Skills with AI-powered conflict resolution. Command: skl",
   "bin": {
-    "skillgit": "./bin/skillsync.js",
-    "skl": "./bin/skillsync.js"
+    "skillgit": "./bin/skl.js",
+    "skl": "./bin/skl.js"
   },
   "scripts": {
-    "start": "node bin/skillsync.js",
+    "start": "node bin/skl.js",
     "test": "node test/test.js"
   },
   "dependencies": {
@@ -38,12 +38,12 @@
   ],
   "author": "XuniverS",
   "license": "MIT",
-  "homepage": "https://github.com/XuniverS/skillgit#readme",
+  "homepage": "https://github.com/XuniverS/SkillGit#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/XuniverS/skillgit.git"
+    "url": "https://github.com/XuniverS/SkillGit.git"
   },
   "bugs": {
-    "url": "https://github.com/XuniverS/skillgit/issues"
+    "url": "https://github.com/XuniverS/SkillGit/issues"
   }
 }

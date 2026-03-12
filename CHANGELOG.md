@@ -38,5 +38,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `DEBUG=1` environment variable for verbose stack traces
 - MIT License
 
-[Unreleased]: https://github.com/XuniverS/skillgit/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/XuniverS/skillgit/releases/tag/v1.0.0
+[Unreleased]: https://github.com/XuniverS/SkillGit/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/XuniverS/SkillGit/releases/tag/v1.0.0
