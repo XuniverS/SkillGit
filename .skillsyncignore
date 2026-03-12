@@ -1,0 +1,7 @@
+# SkillSync ignore patterns (like .gitignore)
+node_modules/
+.DS_Store
+*.log
+*.tmp
+.env
+skillsync-data/
